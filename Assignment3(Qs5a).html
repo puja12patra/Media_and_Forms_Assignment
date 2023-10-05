@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 5. Create a sign-up and sign-in form with proper validation. -->
+<style>
+    .outer {
+        background-color: aliceblue;
+        width: 25%;
+        height: 90vh;
+        margin: auto;
+        padding: 6vh;
+
+    }
+
+
+
+   
+    button {
+        margin:auto;
+        background-image: linear-gradient(120deg, #44a8d6, #751588);
+        border: none;
+        width: 97%;
+        height: 8vh;
+        margin-bottom: 10%;
+        color: aliceblue;
+    }
+</style>
+
+
+<body style="background-image:linear-gradient(120deg,#44a8d6 ,#751588 );width:100%;height:200vh;padding-top:10vh;">
+
+    <div class="outer">
+        <h2 style="text-align: center;">Sign-Up From</h2>
+
+        <form>
+            <div class="fname">
+                <label for="fname">First Name</label>
+                <input type="text" name="fname" required minlength="3" />
+            </div>
+            <br>
+            <div class="lname">
+                <label for="lname">Last Name</label>
+                <input type="text" name="lname" required minlength="3" />
+            </div>
+            <br>
+            <div class="gender">
+                <label>Gender:</label>
+                <input type="radio" id="gender" name="gender" value="male" />Male
+                <input type="radio" id="gender" name="gender" value="female" />Female<br>
+            </div>
+
+            <br>
+            <div class="age">
+                <label for="quantity">Age (between 1 and 150):</label>
+                <input type="number" id="quantity" name="quantity" required min="1" max="150" />
+            </div>
+
+            <br>
+            <div class="mail">
+                <label for="mail">Email</label>
+                <input type="email" name="mail" required minlength="3" />
+            </div>
+
+            <br>
+            <div class="phone">
+                <label for="phone">Enter phone number:</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}" max="10"/>
+            </div>
+
+            <br>
+            <div class="pwd">
+                <label for="pwd">Password</label>
+                <input type="password" id="password" name="pwd" required />
+
+
+                <br><br>
+
+                <label for="pwd">Confirm Password</label>
+                <input type="password" id="confirm_password" name="pwd" required />
+            </div>
+
+            <br>
+
+            <div class="terms">
+
+                <label for="terms"><input type="checkbox" id="terms" name="terms" value="terms" required />Agree to
+                    terms and conditions</label>
+            </div>
+
+            <br><br>
+            <div>
+                <button type="submit">
+                    <p>Sign-Up</p>
+                </button>
+            </div>
+            <p style="text-align: center;">
+                Already have account? Go to <a href="Assignment3(Qs5b).html">Sign In</a>
+            </p>
+        </form>
+    </div>
+</body>
+<script>
+   
+    var password = document.getElementById("password"),
+        confirm_password = document.getElementById("confirm_password");
+
+    function validatePassword() 
+    {
+        if (password.value != confirm_password.value) 
+        {
+            confirm_password.setCustomValidity("Passwords Don't Match");
+        } 
+        else 
+        {
+            confirm_password.setCustomValidity('');
+        }
+    }
+
+    password.onchange = validatePassword;
+    confirm_password.onkeyup = validatePassword;
+</script>
+
+</html>

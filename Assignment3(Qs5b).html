@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .outer {
+        background-color: aliceblue;
+        width: 30%;
+        height: 67vh;
+        margin: auto;
+        padding-top: 2vh;
+        
+
+    }
+
+   
+    label {
+        margin-left: 10%;
+    }
+    input {
+        margin-left: 10%;
+        height: 7vh; 
+        width: 75%;
+    } 
+    button {
+        margin-left: 10%;
+        background-image: linear-gradient(120deg, #44a8d6, #751588);
+        border: none;
+        width: 77%;
+        height: 7vh;
+        margin-bottom: 10%;
+        color: aliceblue;
+    }
+    
+
+</style>
+<body style="background-image:linear-gradient(120deg,#44a8d6 ,#751588 );width:100%;height:200vh;padding-top:10vh;">
+
+        <div class="outer">
+            <h2 style="text-align: center;">Sign-In From</h2> 
+            <form>
+                <div class="mail">
+                    <label for="mail">Email</label>
+                    <input type="email" name="mail" required minlength="3"/>
+                </div>
+              <br>
+              <div class="pwd">
+                <label for="pwd">Password</label>
+                <input type="password" name="pwd" required/>
+              </div>
+              <br><br>
+              <div>
+                <button type="submit"><p>Sign-In</p></button>
+            </div>
+            <p style="text-align: center;">
+                Don't have account? Please <a href="Assignment3(Qs5a).html">Sign Up</a>
+            </p>
+            </form> 
+        </div>
+</body>
+</html>
